@@ -1,0 +1,20 @@
+{
+  "name": "gigazen-main",
+  "version": "1.0.0",
+  "description": "GigaZen is a Premium Game Account Rental Service ",
+  "homepage": "https://github.com/Arjun-Shukla/GigaZen-Main#readme",
+  "bugs": {
+    "url": "https://github.com/Arjun-Shukla/GigaZen-Main/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arjun-Shukla/GigaZen-Main.git"
+  },
+  "license": "ISC",
+  "author": "Arjun Shukla",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
