@@ -1,0 +1,210 @@
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #020617;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 30px 30px;
+  width: 350px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 51rem;
+  position: absolute;
+  left: 40rem;
+  background: rgba(15, 23, 42, 0.7); /* Deep Slate Navy with transparency */
+  backdrop-filter: blur(12px); /* Glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle edge highlight */
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(0, 229, 255, 0.05);
+}
+
+/* Icon */
+.login-icon {
+  font-size: 40px;
+  background: #f1f1f1;
+  border-radius: 12px;
+  padding: 10px;
+  display: inline-block;
+  margin-bottom: 15px;
+  /* color: white; */
+}
+
+.login-box h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #333;
+  color: #22d3ee;
+}
+
+.login-box p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Inputs */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #f8f8f8;
+  font-size: 14px;
+  position: relative;
+  right: 1rem;
+  /* background: rgba(2, 6, 23, 0.8) !important;
+  border: 1px solid #1e293b !important;
+  color: white !important; */
+  background: rgba(2, 6, 23, 0.6) !important;
+  border: 1px solid #334155 !important;
+  color: #f8fafc !important;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  /* border-color: #00e5ff !important;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.3); */
+  border-color: #00e5ff !important;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+  outline: none;
+}
+
+.input-field:hover {
+  border-color: #00e5ff !important;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+  outline: none;
+}
+
+.forgot {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  margin-bottom: 15px;
+  color: #555;
+  text-decoration: none;
+  color: white;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to right, #333, #000);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  /* right: 1rem; */
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, #1f1f1f, #000000);
+  color: #ffffff;
+  border: none;
+}
+
+.btn:hover {
+  /* background: linear-gradient(to right, #444, #111); */
+  background: linear-gradient(135deg, #2a2a2a, #000000);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #b33916;
+}
+
+/* Divider */
+.divider {
+  margin: 20px 0;
+  font-size: 12px;
+  color: #777;
+  position: relative;
+  color: white;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  height: 1px;
+  width: 40%;
+  background: #ddd;
+  position: absolute;
+  top: 50%;
+}
+
+.divider::before {
+  left: 0;
+}
+.divider::after {
+  right: 0;
+}
+
+/* Social buttons */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-buttons button {
+  flex: 1;
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 11px;
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.05); /* Very slight white tint */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
+}
+
+.social-buttons button:hover {
+  background: #f2f2f2;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #00e5ff; /* Cyan glow on hover */
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+}
+
+.usersignupbtn {
+  width: 90%;
+  padding: 12px;
+  background: linear-gradient(to right, #38b832, #124503);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 1rem;
+  position: relative;
+  left: 0.5rem;
+  background: #2979ff;
+}
+
+.usersignupbtn:hover {
+  /* background: #f2f2f2; */
+  /* background: rgba(255, 255, 255, 0.1); */
+  border-color: #00e5ff; /* Cyan glow on hover */
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+}
+
+.usersignupbtn a {
+  text-decoration: none;
+  color: white;
+}

@@ -1,0 +1,91 @@
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #020617;
+}
+
+.container {
+  height: 40rem;
+  width: 90%;
+  position: absolute;
+  top: 15rem;
+  left: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.cards {
+  height: 35rem;
+  width: 50%;
+  border: 2px solid white;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 0rem;
+}
+
+.cards:hover {
+  background: rgba(255, 255, 255, 0.07);
+  transform: translateY(-5px);
+  border: 1px solid rgba(0, 217, 255, 0.4);
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.15);
+}
+
+.card-heading{
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 2rem;
+flex-direction: column;
+height: 32%;
+/* border: 2px solid red; */
+}
+
+#first,
+#second,
+#third,
+#fourth{
+    font-size: 1.5rem;
+}
+
+#firstcard{
+    position: relative;
+    top: 0rem;
+    left: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.paybtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 30%;
+    /* border: 2px solid red; */
+    position: absolute;
+    left: 22rem;
+    bottom: 4rem;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    background-color:#ff5722; 
+    color: white;
+    font-size: 1.2rem;
+}
+

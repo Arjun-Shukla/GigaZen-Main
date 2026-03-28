@@ -1,0 +1,68 @@
+.navbar {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 50rem;
+  position: fixed;
+  top: 4rem;
+  left: 40rem;
+  border: 2px solid white;
+  border-radius: 2rem;
+  background: rgba(10, 15, 30, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid #2f80ff;
+  border-radius: 999px;
+  box-shadow: 0 0 20px rgba(47, 128, 255, 0.15);
+  z-index: 100;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}
+
+.navbar ul li {
+  list-style: none;
+  padding: 1rem 2rem;
+  border-radius: 0rem;
+  transition: all 0.3s ease-in;
+}
+
+.anchor {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #e6edff;
+  transition: all 0.3s ease;
+}
+
+.anchor::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #7f5cff, #00d4ff);
+  box-shadow: 0 0 10px #00d4ff;
+  transition: all 0.35s ease;
+  transform: translateX(-50%);
+}
+
+.anchor:hover::after {
+  width: 100%;
+}
+
+.navbar ul li:hover {
+  color: #4da3ff;
+  text-shadow: 0 0 8px rgba(77, 163, 255, 0.8);
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999rem;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+}

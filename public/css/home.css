@@ -77,6 +77,33 @@ body {
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
 }
 
+.loginbtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 8rem;
+  position: sticky;
+  top: 4rem;
+  left: 120rem;
+  border: 2px solid white;
+  border-radius: 2rem;
+  background: rgba(10, 15, 30, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid #2f80ff;
+  border-radius: 999px;
+  box-shadow: 0 0 20px rgba(47, 128, 255, 0.15);
+  z-index: 100;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+#link{
+  text-decoration: none;
+}
+
 #hero-container {
   height: 55rem;
   width: 100%;
@@ -310,9 +337,9 @@ input:hover {
   position: absolute;
   top: 150rem;
   outline: none;
-  margin-bottom: 0rem;
+  /* margin-bottom: 0rem;
   bottom: 0rem;
-  left: 0rem;
+  left: 0rem; */
 }
 
 .footer-icon {
@@ -376,11 +403,11 @@ input:hover {
 }
 
 #myphoto {
-background-image: url('../img/logoNew2.png');
-background-repeat: no-repeat;
-background-position: center center;
-background-size: 100% 100%;
-z-index: 50;
+  background-image: url("../img/logoNew2.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  z-index: 50;
 }
 
 #content-container {
@@ -486,5 +513,3 @@ z-index: 50;
   cursor: pointer;
   font-weight: bolder;
 }
-
-
