@@ -1,11 +1,14 @@
 const express = require('express');
 
+const authCheck = require('../middlewares/authCheck.middleware');
+
 const router = express.Router();
 
-router.get('/', (req,res)=>{
+router.get('/',  authCheck , (req,res)=>{
 
-    // res.status(201);
-    res.render("home");
+    res.render("home" , {
+        user : req.user
+    });
 })
 
 module.exports = router;

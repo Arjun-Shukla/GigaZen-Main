@@ -5,6 +5,7 @@ html {
 
 body {
   background-color: #020617;
+  overflow-x: hidden;
 }
 
 .login-box {
@@ -121,6 +122,9 @@ body {
   background: linear-gradient(135deg, #2a2a2a, #000000);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
   transform: translateY(-2px);
+}
+.link2{
+  text-decoration: none;
 }
 
 .btn:active {

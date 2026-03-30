@@ -1,0 +1,173 @@
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #020617;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: linear-gradient(to bottom, #a3d8ff, #ffffff); */
+  padding: 20px;
+  overflow-x:hidden;
+}
+
+/* Glass container */
+.signup-box {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 30px 25px;
+  width: 400px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  background: rgba(15, 23, 42, 0.7); /* Deep Slate Navy with transparency */
+  backdrop-filter: blur(12px); /* Glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle edge highlight */
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(0, 229, 255, 0.05);
+}
+
+.signup-box h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #22d3ee;
+}
+
+.signup-box p {
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Input fields */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #f8f8f8;
+  font-size: 14px;
+  background: rgba(2, 6, 23, 0.6) !important;
+  border: 1px solid #334155 !important;
+  color: #f8fafc !important;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  /* border-color: #00e5ff !important;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.3); */
+  border-color: #00e5ff !important;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+  outline: none;
+}
+
+.input-field:hover {
+  border-color: #00e5ff !important;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+  outline: none;
+}
+
+/* Select dropdown */
+select.input-field {
+  background: #f8f8f8;
+  cursor: pointer;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #333, #000);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, #1f1f1f, #000000);
+  color: #ffffff;
+  border: none;
+  background: #2979ff;
+}
+
+.btn:hover {
+  border-color: #00e5ff; /* Cyan glow on hover */
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+}
+
+.btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #b33916;
+}
+
+/* Divider */
+.divider {
+  margin: 20px 0;
+  font-size: 12px;
+  color: #777;
+  text-align: center;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  height: 1px;
+  width: 40%;
+  background: #ddd;
+  position: absolute;
+  top: 50%;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+/* Social buttons */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-buttons button {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.05); /* Very slight white tint */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
+}
+
+.social-buttons button:hover {
+  background: #f2f2f2;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #00e5ff; /* Cyan glow on hover */
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+}

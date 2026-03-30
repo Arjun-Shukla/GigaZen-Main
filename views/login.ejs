@@ -7,39 +7,63 @@
     <title>Login</title>
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
 
+    <% if(success){%>
+        <script>
+            Swal.fire({
+                title: "Welcome to GigaZen 🚀",
+                text: "Signup successful!",
+                icon: "success",
+                background: "#020617",
+                color: "#22c55e",
+                confirmButtonColor: "#22c55e"
+            });
+            // Swal.fire({
+            //   title: "Success 🎉",
+            //   text: "Registration completed!",
+            //   icon: "success",
+            //   timer: 2000,
+            //   showConfirmButton: false
+            // });
+        </script>
+        <%} %>
 
-    <div class="login-box">
-        <div class="login-icon">🔑</div>
-        <h2>Sign in with email</h2>
-        <p>Make a new doc to bring your words, data, and teams together. For free</p>
+            <div class="login-box">
+                <div class="login-icon">🔑</div>
+                <h2>Sign in with email</h2>
+                <p>Make a new doc to bring your words, data, and teams together. For free</p>
 
-        <form>
+                <form action="/auth/login" method="post" >
 
-            <input type="email" class="input-field" placeholder="Email">
-            <input type="password" class="input-field" placeholder="Password">
+                    <input type="email" class="input-field" placeholder="Email" name="email">
+                    <input type="password" class="input-field" placeholder="Password" name="password">
 
-            <a href="#" class="forgot">Forgot password?</a>
-            <!-- <div class="g-recaptcha" data-sitekey="6Lf3DEUsAAAAAE_-3C7IPk-pbCa0y_N176bkUIog"></div> -->
+                    <a href="#" class="forgot">Forgot password?</a>
+                    <!-- <div class="g-recaptcha" data-sitekey="6Lf3DEUsAAAAAE_-3C7IPk-pbCa0y_N176bkUIog"></div> -->
 
-            <button class="btn" type="submit">Get Started</button>
-            <div class="usersignupbtn">
-                <a href="usersignup.html">Create a new account</a>
+                    <button class="btn" type="submit">Get Started</button>
+                    <a href="/signup" class="link2">
+                        <div class="usersignupbtn">
+                            Create a new account
+                        </div>
+                    </a>
+
+                </form>
+
+                <div class="divider">Or sign in with</div>
+
+                <div class="social-buttons">
+                    <button><i class="fa-brands fa-google"></i> Google</button>
+                    <button><i class="fa-brands fa-facebook"></i>Facebook</button>
+                    <button><i class="fa-solid fa-mobile"></i>Mobile</button>
+                </div>
             </div>
 
-        </form>
 
-        <div class="divider">Or sign in with</div>
-
-        <div class="social-buttons">
-            <button><i class="fa-brands fa-google"></i> Google</button>
-            <button><i class="fa-brands fa-facebook"></i>Facebook</button>
-            <button><i class="fa-solid fa-mobile"></i>Mobile</button>
-        </div>
-    </div>
 
 </body>
 

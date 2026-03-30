@@ -6,6 +6,35 @@ html {
 body {
   /* background: linear-gradient(180deg, #020617, #111827); */
   background-color: #020617;
+  overflow-x: hidden;
+}
+
+#userhead {
+  color: white;
+  position: absolute;
+  top: 3.5rem;
+  left: 105rem;
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #00f5ff;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  text-shadow:
+    0 0 5px #00f5ff,
+    0 0 10px #00f5ff,
+    0 0 20px rgba(0, 245, 255, 0.5);
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#userhead:hover {
+  color: #ffffff;
+  text-shadow:
+    0 0 10px #00f5ff,
+    0 0 25px #00f5ff,
+    0 0 40px rgba(0, 245, 255, 0.8);
 }
 
 .navbar {
@@ -86,7 +115,7 @@ body {
   width: 8rem;
   position: sticky;
   top: 4rem;
-  left: 120rem;
+  left: 118rem;
   border: 2px solid white;
   border-radius: 2rem;
   background: rgba(10, 15, 30, 0.65);
@@ -100,7 +129,7 @@ body {
   cursor: pointer;
 }
 
-#link{
+#link {
   text-decoration: none;
 }
 
@@ -337,9 +366,9 @@ input:hover {
   position: absolute;
   top: 150rem;
   outline: none;
-  /* margin-bottom: 0rem;
+  margin-bottom: 0rem;
   bottom: 0rem;
-  left: 0rem; */
+  left: 0rem;
 }
 
 .footer-icon {
