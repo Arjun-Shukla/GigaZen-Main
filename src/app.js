@@ -22,11 +22,14 @@ const paymentRoute = require('../routes/payment.route');
 const loginRoute = require('../routes/login.route');
 const signupRoute = require('../routes/signup.route');
 const authRoute = require('../routes/auth.route');
+const logoutRoute = require('../routes/logout.route');
 
+//route-handlers
 app.use('/' , homeRoute);
 app.use('/payment' , paymentRoute);
 app.use('/login' , loginRoute);
 app.use('/signup' , signupRoute);
 app.use('/auth' , authRoute);
+app.use('/logout' , logoutRoute);
 
 module.exports = app;

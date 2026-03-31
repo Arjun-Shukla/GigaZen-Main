@@ -8,7 +8,7 @@ isAuth =(req,res,next)=>{
 const token = req.cookies.token;
 
 if(!token){
-    return res.redirect('/login?error=1');
+    return res.redirect('/login?loginError=1');
 }
 
 else{
@@ -20,7 +20,7 @@ try{
 
 }
 catch(err){
-    res.redirect('/login?error=1');
+    res.redirect('/login?loginError=1');
 }
 
 }

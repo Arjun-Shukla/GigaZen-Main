@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
             <div class="cards">
                 <div class="card-heading">
                     <p>ZEN BASIC</p>
-                    <p>₹299</p>
+                    <p>₹299/month</p>
                 </div>
                 <div id="firstcard">
                     <p id="first">3 Games</p>
@@ -31,16 +32,18 @@
                     <p id="fourth">Instant Delievery</p>
                 </div>
 
-                <div class="paybtn">
-                    RENT NOW
-                </div>
+                <!-- <a href="" class="link">
+                    <div class="paybtn">
+                        RENT NOW
+                    </div>
+                </a> -->
 
             </div>
             <div class="cards">
 
                 <div class="card-heading">
                     <p>ZEN PREMIUM</p>
-                    <p>₹499</p>
+                    <p>₹499/month</p>
                 </div>
                 <div id="firstcard">
                     <p id="first">10 Games</p>
@@ -49,16 +52,18 @@
                     <p id="fourth">Instant Delievery</p>
                 </div>
 
-                <div class="paybtn">
-                    RENT NOW
-                </div>
+                <!-- <a href="" class="link">
+                    <div class="paybtn">
+                        RENT NOW
+                    </div>
+                </a> -->
 
             </div>
             <div class="cards">
 
                 <div class="card-heading">
                     <p>ZEN PREMIUM +</p>
-                    <p>₹1199</p>
+                    <p>₹1199/month</p>
                 </div>
                 <div id="firstcard">
                     <p id="first">20 Games</p>
@@ -67,14 +72,46 @@
                     <p id="fourth">Instant Delievery</p>
                 </div>
 
-                <div class="paybtn">
-                    RENT NOW
-                </div>
+                <a href="" class="link">
+                    <div class="paybtn">
+                        RENT NOW
+                    </div>
+                </a>
 
             </div>
         </div>
 
         <%- include("../partials/footer") %>
+
+            <script>
+
+                document.getElementsByClassName('paybtn').onclick = async function () {
+
+                    const res = await fetch("/payment/create-order", {
+                        method: "POST"
+                    })
+
+                    const order = await res.json();
+
+                    const options = {
+                        key : "rzp_test_SXyVmneVBmdXh2",
+                        amount : order.amount,
+                        currency : "INR",
+                        name : "gigazen",
+                        description: "Game Account Rental Platform",
+                        order_id : order.id,
+                        handler : function (response) {
+                            alert("Payment Successful");
+                            console.log(response);
+                        }
+                    }
+
+                    const rzp = new Razorpay(options);
+                    rzp.open();
+
+                }
+
+            </script>
 
 </body>
 

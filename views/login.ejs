@@ -22,46 +22,63 @@
                 color: "#22c55e",
                 confirmButtonColor: "#22c55e"
             });
-            // Swal.fire({
-            //   title: "Success 🎉",
-            //   text: "Registration completed!",
-            //   icon: "success",
-            //   timer: 2000,
-            //   showConfirmButton: false
-            // });
         </script>
         <%} %>
 
-            <div class="login-box">
-                <div class="login-icon">🔑</div>
-                <h2>Sign in with email</h2>
-                <p>Make a new doc to bring your words, data, and teams together. For free</p>
+            <% if(loginError){%>
+                <script>
+                    Swal.fire({
+                        title: "Oops 😬",
+                        text: "Login First",
+                        icon: "error",
+                        background: "#020617",
+                        color: "#ef4444",
+                        confirmButtonColor: "#ef4444"
+                    });
+                </script>
+                <%} %>
 
-                <form action="/auth/login" method="post" >
+                    <% if(error){%>
+                        <script>
+                            Swal.fire({
+                                title: "Login Failed ❌",
+                                text: "Invalid email or password",
+                                icon: "error",
+                                confirmButtonColor: "#ef4444"
+                            });
+                        </script>
+                        <%} %>
 
-                    <input type="email" class="input-field" placeholder="Email" name="email">
-                    <input type="password" class="input-field" placeholder="Password" name="password">
+                            <div class="login-box">
+                                <div class="login-icon">🔑</div>
+                                <h2>Sign in with email</h2>
+                                <p>Make a new doc to bring your words, data, and teams together. For free</p>
 
-                    <a href="#" class="forgot">Forgot password?</a>
-                    <!-- <div class="g-recaptcha" data-sitekey="6Lf3DEUsAAAAAE_-3C7IPk-pbCa0y_N176bkUIog"></div> -->
+                                <form action="/auth/login" method="post">
 
-                    <button class="btn" type="submit">Get Started</button>
-                    <a href="/signup" class="link2">
-                        <div class="usersignupbtn">
-                            Create a new account
-                        </div>
-                    </a>
+                                    <input type="email" class="input-field" placeholder="Email" name="email">
+                                    <input type="password" class="input-field" placeholder="Password" name="password">
 
-                </form>
+                                    <a href="#" class="forgot">Forgot password?</a>
+                                    <!-- <div class="g-recaptcha" data-sitekey="6Lf3DEUsAAAAAE_-3C7IPk-pbCa0y_N176bkUIog"></div> -->
 
-                <div class="divider">Or sign in with</div>
+                                    <button class="btn" type="submit">Get Started</button>
+                                    <a href="/signup" class="link2">
+                                        <div class="usersignupbtn">
+                                            Create a new account
+                                        </div>
+                                    </a>
 
-                <div class="social-buttons">
-                    <button><i class="fa-brands fa-google"></i> Google</button>
-                    <button><i class="fa-brands fa-facebook"></i>Facebook</button>
-                    <button><i class="fa-solid fa-mobile"></i>Mobile</button>
-                </div>
-            </div>
+                                </form>
+
+                                <div class="divider">Or sign in with</div>
+
+                                <div class="social-buttons">
+                                    <button><i class="fa-brands fa-google"></i> Google</button>
+                                    <button><i class="fa-brands fa-facebook"></i>Facebook</button>
+                                    <button><i class="fa-solid fa-mobile"></i>Mobile</button>
+                                </div>
+                            </div>
 
 
 

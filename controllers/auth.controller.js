@@ -36,7 +36,7 @@ exports.login = async (req, res) => {
 
     if (!user) {
             //   console.log("User not found ❌");
-      return res.redirect("/login?error=1");
+      return res.redirect("/signup?register=1");
     }
 
     if (user.password !== req.body.password) {
@@ -55,12 +55,14 @@ exports.login = async (req, res) => {
     );
 
     res.cookie("token", token);
-    res.json(token);
+    // res.json(token);
     req.users = token;
-    return res.redirect('/?home=1');
+    return res.redirect('/?login=1');
 
   } catch (err) {
+
     console.log(err);
     return res.redirect("/login?error=1");
+
   }
 };
