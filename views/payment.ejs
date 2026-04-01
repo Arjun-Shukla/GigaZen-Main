@@ -32,11 +32,9 @@
                     <p id="fourth">Instant Delievery</p>
                 </div>
 
-                <!-- <a href="" class="link">
-                    <div class="paybtn">
-                        RENT NOW
-                    </div>
-                </a> -->
+                <button class="paybtn" onclick="createOrder(299)">
+                    RENT NOW
+                </button>
 
             </div>
             <div class="cards">
@@ -52,11 +50,9 @@
                     <p id="fourth">Instant Delievery</p>
                 </div>
 
-                <!-- <a href="" class="link">
-                    <div class="paybtn">
-                        RENT NOW
-                    </div>
-                </a> -->
+                <button class="paybtn" onclick="createOrder(499)">
+                    RENT NOW
+                </button>
 
             </div>
             <div class="cards">
@@ -72,7 +68,7 @@
                     <p id="fourth">Instant Delievery</p>
                 </div>
 
-                <button class="paybtn" onclick="createOrder()">
+                <button class="paybtn" onclick="createOrder(1199)">
                     RENT NOW
                 </button>
 
@@ -84,10 +80,16 @@
 
             <script>
 
-                async function createOrder() {
+                async function createOrder(amount) {
 
                     const res = await fetch("/payment/create-order", {
-                        method: "POST"
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            amount: amount
+                        })
                     })
 
                     const order = await res.json();
