@@ -72,11 +72,10 @@
                     <p id="fourth">Instant Delievery</p>
                 </div>
 
-                <a href="/payment/create-order" class="link">
-                    <div class="paybtn">
-                        RENT NOW
-                    </div>
-                </a>
+                <button class="paybtn" onclick="createOrder()">
+                    RENT NOW
+                </button>
+
 
             </div>
         </div>
@@ -85,7 +84,7 @@
 
             <script>
 
-                document.getElementsByClassName('paybtn').onclick = async function () {
+                async function createOrder() {
 
                     const res = await fetch("/payment/create-order", {
                         method: "POST"
@@ -94,13 +93,13 @@
                     const order = await res.json();
 
                     const options = {
-                        key : "rzp_test_SXyVmneVBmdXh2",
-                        amount : order.amount,
-                        currency : "INR",
-                        name : "gigazen",
+                        key: "rzp_test_SXyVmneVBmdXh2",
+                        amount: order.amount,
+                        currency: "INR",
+                        name: "gigazen",
                         description: "Game Account Rental Platform",
-                        order_id : order.id,
-                        handler : function (response) {
+                        order_id: order.id,
+                        handler: function (response) {
                             alert("Payment Successful");
                             console.log(response);
                         }

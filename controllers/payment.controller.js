@@ -1,16 +1,16 @@
 const Razorpay = require('razorpay');
 
-const instance = {
+const instance = new Razorpay({
     key_id : process.env.RAZORPAY_KEY_ID,
     key_secret : process.env.RAZORPAY_KEY_SECRET
-}
+});
 
 exports.createOrder = async function(req,res){
 try{
     
     const options = {
     
-    amount : 120000,
+    amount : 119900,
     currency : "INR",
     receipt : "order_recptd_1"
     
