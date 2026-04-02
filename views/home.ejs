@@ -31,116 +31,116 @@
         </div>
     </nav>
 
-        <% if (!user) { %>
-            <a href="/login" class="btn">Login</a>
-            <% } else { %>
-                <span class="user">Welcome <%= user.name %></span>
-                <a href="/logout" class="btn">Logout</a>
-                <% } %>
+    <% if (!user) { %>
+        <a href="/login" class="loginbtn">Login</a>
+        <% } else { %>
+            <span class="user">Welcome <%= user.name %></span>
+            <a href="/logout" class="logoutbtn">Logout</a>
+            <% } %>
 
 
-    <% if(logout){ %>
-        <script>
-            Swal.fire({
-                title: "Logged Out 👋",
-                text: "You have been logged out successfully!",
-                icon: "success",
-                timer: 2000,
-                showConfirmButton: false,
-                background: "#020617",
-                color: "#22c55e"
-            });
-        </script>
-        <% } %>
-
-            <% if(login){ %>
-                <script>
-                    Swal.fire({
-                        title: "Welcome 🎉",
-                        text: "Login successful!",
-                        icon: "success",
-                        timer: 2000,
-                        showConfirmButton: false,
-                        background: "#020617",
-                        color: "#22c55e"
-                    });
-                </script>
-                <% } %>
-
-                    <section class="hero">
-                        <div class="hero-content">
-
-                            <p class="tag">PLAY ANY PC GAMES INSTANTLY</p>
-
-                            <h1>
-                                RENT PREMIUM GAME ACCOUNTS FOR A FRACTION OF THE COST
-                            </h1>
-
-                            <p class="desc">
-                                Unlock a massive library of top PC titles. No high cost needed,
-                                no full purchase required. Start gaming now.
-                            </p>
-
-                            <a href="/payment" class="rentbtn">Rent Now</a>
-
-                        </div>
-                    </section>
-
-                    <section class="contact">
-                        <div id="contact-container">
-
-                            <h2>Contact Us</h2>
-
-                            <form>
-                                <input type="text" name="name" placeholder="Player Name">
-                                <input type="text" name="email" placeholder="Player Email">
-                                <input type="text" name="suggestion" placeholder="Any Game Suggestion">
-
-                                <div class="form-btns">
-                                    <input type="reset" value="Reset">
-                                    <input type="submit" value="Submit">
-                                </div>
-                            </form>
-
-                        </div>
-                    </section>
-
-                    <footer class="footer">
-                        <div class="footer-container">
-
-                            <div>
-                                <h2>GigaZen</h2>
-                                <p>Rent premium game accounts at minimal cost.</p>
-                            </div>
-
-                            <div class="links">
-                                <div>
-                                    <h4>Services</h4>
-                                    <p>Features</p>
-                                    <p>Pricing</p>
-                                </div>
-
-                                <div>
-                                    <h4>Resources</h4>
-                                    <p>Docs</p>
-                                    <p>Blog</p>
-                                </div>
-
-                                <div>
-                                    <h4>Company</h4>
-                                    <p>About</p>
-                                    <p>Contact</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </footer>
-
+                <% if(logout){ %>
                     <script>
-                        function toggleMenu() {
-                            document.getElementById("navLinks").classList.toggle("active");
-                        }
+                        Swal.fire({
+                            title: "Logged Out 👋",
+                            text: "You have been logged out successfully!",
+                            icon: "success",
+                            timer: 2000,
+                            showConfirmButton: false,
+                            background: "#020617",
+                            color: "#22c55e"
+                        });
                     </script>
+                    <% } %>
+
+                        <% if(login){ %>
+                            <script>
+                                Swal.fire({
+                                    title: "Welcome 🎉",
+                                    text: "Login successful!",
+                                    icon: "success",
+                                    timer: 2000,
+                                    showConfirmButton: false,
+                                    background: "#020617",
+                                    color: "#22c55e"
+                                });
+                            </script>
+                            <% } %>
+
+                                <section class="hero">
+                                    <div class="hero-content">
+
+                                        <p class="tag">PLAY ANY PC GAMES INSTANTLY</p>
+
+                                        <h1>
+                                            RENT PREMIUM GAME ACCOUNTS FOR A FRACTION OF THE COST
+                                        </h1>
+
+                                        <p class="desc">
+                                            Unlock a massive library of top PC titles. No high cost needed,
+                                            no full purchase required. Start gaming now.
+                                        </p>
+
+                                        <a href="/payment" class="rentbtn">Rent Now</a>
+
+                                    </div>
+                                </section>
+
+                                <section class="contact">
+                                    <div id="contact-container">
+
+                                        <h2>Contact Us</h2>
+
+                                        <form>
+                                            <input type="text" name="name" placeholder="Player Name" class="upperinput">
+                                            <input type="text" name="email" placeholder="Player Email" class="upperinput">
+                                            <input type="text" name="suggestion" placeholder="Any Game Suggestion" class="upperinput">
+
+                                            <div class="form-btns">
+                                                <input type="reset" value="Reset" class="lowerinput">
+                                                <input type="submit" value="Submit" class="lowerinput">
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </section>
+
+                                <footer class="footer">
+                                    <div class="footer-container">
+
+                                        <div>
+                                            <h2>GigaZen</h2>
+                                            <p>Rent premium game accounts at minimal cost.</p>
+                                        </div>
+
+                                        <div class="links">
+                                            <div>
+                                                <h4>Services</h4>
+                                                <p>Features</p>
+                                                <p>Pricing</p>
+                                            </div>
+
+                                            <div>
+                                                <h4>Resources</h4>
+                                                <p>Docs</p>
+                                                <p>Blog</p>
+                                            </div>
+
+                                            <div>
+                                                <h4>Company</h4>
+                                                <p>About</p>
+                                                <p>Contact</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </footer>
+
+                                <script>
+                                    function toggleMenu() {
+                                        document.getElementById("navLinks").classList.toggle("active");
+                                    }
+                                </script>
 
 </body>
 
