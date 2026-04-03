@@ -34,6 +34,5 @@ exports.createOrder = async function (req, res) {
 
     console.log(err);
     res.status(500).send("Order Create Not Available");
-
   }
 };

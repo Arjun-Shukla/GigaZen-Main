@@ -23,6 +23,7 @@ const loginRoute = require('../routes/login.route');
 const signupRoute = require('../routes/signup.route');
 const authRoute = require('../routes/auth.route');
 const logoutRoute = require('../routes/logout.route');
+const sessionRoutes = require("../routes/sessionRoutes");
 
 //route-handlers
 app.use('/' , homeRoute);
@@ -31,5 +32,6 @@ app.use('/login' , loginRoute);
 app.use('/signup' , signupRoute);
 app.use('/auth' , authRoute);
 app.use('/logout' , logoutRoute);
+app.use("/session", sessionRoutes);
 
 module.exports = app;
