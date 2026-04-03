@@ -29,7 +29,7 @@ const startSession = async (req, res) => {
 
         return res.json({
             message: "Session started successfully",
-            ip: "192.168.19.210",
+            ip: "10.20.17.88",
             instructions: "Open Moonlight and connect using this IP"
         });
 
