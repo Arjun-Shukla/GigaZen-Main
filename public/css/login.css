@@ -6,6 +6,9 @@ html {
 body {
   background-color: #020617;
   overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .login-box {
@@ -14,12 +17,12 @@ body {
   -webkit-backdrop-filter: blur(12px);
   border-radius: 16px;
   padding: 30px 30px;
-  width: 350px;
+  max-width: 350px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   text-align: center;
-  height: 51rem;
-  position: absolute;
-  left: 40rem;
+  max-height: 51rem;
+  /* position: fixed;
+  left: 40rem; */
   background: rgba(15, 23, 42, 0.7); /* Deep Slate Navy with transparency */
   backdrop-filter: blur(12px); /* Glass effect */
   border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle edge highlight */
@@ -36,7 +39,6 @@ body {
   padding: 10px;
   display: inline-block;
   margin-bottom: 15px;
-  /* color: white; */
 }
 
 .login-box h2 {
@@ -64,9 +66,6 @@ body {
   font-size: 14px;
   position: relative;
   right: 1rem;
-  /* background: rgba(2, 6, 23, 0.8) !important;
-  border: 1px solid #1e293b !important;
-  color: white !important; */
   background: rgba(2, 6, 23, 0.6) !important;
   border: 1px solid #334155 !important;
   color: #f8fafc !important;
@@ -75,8 +74,6 @@ body {
 }
 
 .input-field:focus {
-  /* border-color: #00e5ff !important;
-  box-shadow: 0 0 10px rgba(0, 229, 255, 0.3); */
   border-color: #00e5ff !important;
   box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
   outline: none;
@@ -123,7 +120,7 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
   transform: translateY(-2px);
 }
-.link2{
+.link2 {
   text-decoration: none;
 }
 
@@ -211,4 +208,43 @@ body {
 .usersignupbtn a {
   text-decoration: none;
   color: white;
+}
+@media (max-width: 768px) {
+  .login-box {
+    padding: 0rem 1.5rem;
+    height: auto;
+    margin: 0rem auto;
+  }
+
+  .login-box h2 {
+    font-size: 1.8rem;
+  }
+
+  .login-box p {
+    font-size: 1.2rem;
+  }
+
+  .input-field {
+    font-size: 1.3rem;
+    padding: 1.2rem;
+    /* right: 0;  */
+  }
+
+  .btn {
+    font-size: 1.4rem;
+    padding: 1.2rem;
+  }
+
+  .usersignupbtn {
+    width: 90%;
+  }
+
+  .social-buttons {
+    flex-direction: row;
+  }
+
+  .social-buttons button {
+    width: 100%;
+    font-size: 1.2rem;
+  }
 }

@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  font-size: 15px;
 }
 
 * {
@@ -14,13 +15,87 @@ body {
   font-family: sans-serif;
 }
 
-.btn {
+.userhead {
+  color: white;
+  position: sticky;
+  top: 4.5rem;
+  left: 84vw;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #00f5ff;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  text-shadow:
+    0 0 5px #00f5ff,
+    0 0 10px #00f5ff,
+    0 0 20px rgba(0, 245, 255, 0.5);
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.userhead:hover {
+  color: #ffffff;
+  text-shadow:
+    0 0 10px #00f5ff,
+    0 0 25px #00f5ff,
+    0 0 40px rgba(0, 245, 255, 0.8);
+}
+
+.loginbtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+  width: 5rem;
+  position: sticky;
+  top: 4.2rem;
+  left: 90vw;
+  border: 2px solid white;
+  border-radius: 2rem;
+  background: rgba(10, 15, 30, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid #2f80ff;
+  border-radius: 999px;
+  box-shadow: 0 0 20px rgba(47, 128, 255, 0.15);
+  z-index: 100;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.logoutbtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+  width: 5rem;
+  position: sticky;
+  top: 6rem;
+  left: 90vw;
+  border: 2px solid white;
+  border-radius: 2rem;
+  background: rgba(10, 15, 30, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid #2f80ff;
+  border-radius: 999px;
+  box-shadow: 0 0 20px rgba(47, 128, 255, 0.15);
+  z-index: 100;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .navbar {
   position: fixed;
   width: 100%;
-  top: 0;
+  top: 0px;
   background: rgba(10, 15, 30, 0.7);
   backdrop-filter: blur(10px);
   z-index: 100;
@@ -107,10 +182,12 @@ body {
   justify-content: center;
   text-align: center;
   padding: 2rem;
+  /* margin-top: 5rem; */
 }
 
 .hero-content {
   max-width: 600px;
+    margin-top: 10rem;
 }
 
 .tag {
@@ -288,5 +365,9 @@ body {
 
   .hero h1 {
     font-size: 1.8rem;
+  }
+
+  .loginbtn{
+    left: 80vw;
   }
 }

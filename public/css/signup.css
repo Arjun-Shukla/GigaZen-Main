@@ -16,7 +16,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: linear-gradient(to bottom, #a3d8ff, #ffffff); */
   padding: 20px;
   overflow-x:hidden;
 }

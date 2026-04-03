@@ -16,7 +16,7 @@ exports.signup = async (req, res) => {
   } 
   catch (err) {
 
-    res.redirect("/signup?error=1")
+    res.redirect("/signup?error=1");
     
   }
 }

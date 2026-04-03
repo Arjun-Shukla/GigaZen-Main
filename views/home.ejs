@@ -34,7 +34,7 @@
     <% if (!user) { %>
         <a href="/login" class="loginbtn">Login</a>
         <% } else { %>
-            <span class="user">Welcome <%= user.name %></span>
+            <span class="userhead">Welcome <%= user.name %></span>
             <a href="/logout" class="logoutbtn">Logout</a>
             <% } %>
 
@@ -67,81 +67,327 @@
                             </script>
                             <% } %>
 
-                                <section class="hero">
-                                    <div class="hero-content">
 
-                                        <p class="tag">PLAY ANY PC GAMES INSTANTLY</p>
+                                <% if(feedback){ %>
+                                    <script>
+                                        Swal.fire({
+                                            icon: 'success',
+                                            title: 'Submitted!',
+                                            text: 'Your details were saved successfully.',
+                                            showConfirmButton: false,
+                                            timer: 2000
+                                        });
+                                    </script>
+                                    <% } %>
 
-                                        <h1>
-                                            RENT PREMIUM GAME ACCOUNTS FOR A FRACTION OF THE COST
-                                        </h1>
+                                        <section class="hero">
+                                            <div class="hero-content">
 
-                                        <p class="desc">
-                                            Unlock a massive library of top PC titles. No high cost needed,
-                                            no full purchase required. Start gaming now.
-                                        </p>
+                                                <p class="tag">PLAY ANY PC GAMES INSTANTLY</p>
 
-                                        <a href="/payment" class="rentbtn">Rent Now</a>
+                                                <h1>
+                                                    RENT PREMIUM GAMES FOR A FRACTION OF THE COST
+                                                </h1>
 
-                                    </div>
-                                </section>
+                                                <p class="desc">
+                                                    Unlock a massive library of top PC titles. No high cost needed,
+                                                    no full purchase required. Start gaming now.
+                                                </p>
 
-                                <section class="contact">
-                                    <div id="contact-container">
+                                                <a href="/payment" class="rentbtn">Rent Now</a>
 
-                                        <h2>Contact Us</h2>
-
-                                        <form>
-                                            <input type="text" name="name" placeholder="Player Name" class="upperinput">
-                                            <input type="text" name="email" placeholder="Player Email" class="upperinput">
-                                            <input type="text" name="suggestion" placeholder="Any Game Suggestion" class="upperinput">
-
-                                            <div class="form-btns">
-                                                <input type="reset" value="Reset" class="lowerinput">
-                                                <input type="submit" value="Submit" class="lowerinput">
                                             </div>
-                                        </form>
+                                        </section>
 
-                                    </div>
-                                </section>
+                                        <section class="contact">
+                                            <div id="contact-container">
 
-                                <footer class="footer">
-                                    <div class="footer-container">
+                                                <h2>Contact Us</h2>
 
-                                        <div>
-                                            <h2>GigaZen</h2>
-                                            <p>Rent premium game accounts at minimal cost.</p>
-                                        </div>
+                                                <form action="/" method="post">
+                                                    <input type="text" name="name" placeholder="Player Name"
+                                                        class="upperinput">
+                                                    <input type="text" name="email" placeholder="Player Email"
+                                                        class="upperinput">
+                                                    <input type="text" name="suggestion"
+                                                        placeholder="Any Game Suggestion" class="upperinput">
 
-                                        <div class="links">
-                                            <div>
-                                                <h4>Services</h4>
-                                                <p>Features</p>
-                                                <p>Pricing</p>
+                                                    <div class="form-btns">
+                                                        <button type="reset" value="Reset" class="lowerinput">RESET
+                                                            <button type="submit" value="Submit"
+                                                                class="lowerinput">SUBMIT
+                                                    </div>
+                                                </form>
+
                                             </div>
+                                        </section>
 
-                                            <div>
-                                                <h4>Resources</h4>
-                                                <p>Docs</p>
-                                                <p>Blog</p>
+                                        <footer class="footer">
+                                            <div class="footer-container">
+
+                                                <div>
+                                                    <h2>GigaZen</h2>
+                                                    <p>Rent premium games at minimal cost.</p>
+                                                </div>
+
+                                                <div class="links">
+                                                    <div>
+                                                        <h4>Services</h4>
+                                                        <p>Features</p>
+                                                        <p>Pricing</p>
+                                                    </div>
+
+                                                    <div>
+                                                        <h4>Resources</h4>
+                                                        <p>Docs</p>
+                                                        <p>Blog</p>
+                                                    </div>
+
+                                                    <div>
+                                                        <h4>Company</h4>
+                                                        <p>About</p>
+                                                        <p>Contact</p>
+                                                    </div>
+                                                </div>
+
                                             </div>
+                                        </footer>
 
-                                            <div>
-                                                <h4>Company</h4>
-                                                <p>About</p>
-                                                <p>Contact</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </footer>
-
-                                <script>
-                                    function toggleMenu() {
-                                        document.getElementById("navLinks").classList.toggle("active");
-                                    }
-                                </script>
+                                        <script>
+                                            function toggleMenu() {
+                                                document.getElementById("navLinks").classList.toggle("active");
+                                            }
+                                        </script>
 
 </body>
 
 </html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/homeR.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+
+            <ul>
+                <a href="/" class="anchor">
+                    <li>Hub</li>
+                </a>
+                <a href="/payment" class="anchor">
+                    <li>Plans</li>
+                </a>
+                <a href="#contact-container" class="anchor">
+                    <li>Connect</li>
+                </a>
+            </ul>
+        </div>
+
+    </nav>
+
+    <% if (!user) { %>
+
+        <a href="/login" id="link">
+            <div class="loginbtn">
+                Login
+            </div>
+        </a>
+
+        <% } else { %>
+
+            <p id="userhead">Welcome <%= user.name %>
+            </p>
+
+            <a href="/logout" id="link">
+                <div class="logoutbtn">
+                    LogOut
+                </div>
+            </a>
+            <% } %>
+
+                <% if(logout){%>
+                    <script>
+                        Swal.fire({
+                            title: "Logged Out 👋",
+                            text: "You have been logged out successfully!",
+                            icon: "success",
+                            timer: 2000,
+                            showConfirmButton: false,
+                            background: "#020617",
+                            color: "#22c55e"
+                        });
+                    </script>
+                    <%} %>
+
+                        <% if(login){%>
+                            <script>
+                                Swal.fire({
+                                    title: "Welcome 🎉",
+                                    text: "Login successful!",
+                                    icon: "success",
+                                    timer: 2000,
+                                    showConfirmButton: false,
+                                    background: "#020617",
+                                    color: "#22c55e"
+                                });
+                            </script>
+                            <%} %>
+
+                                <% if(feedback){%>
+                                    <script>
+                                        Swal.fire({
+                                            icon: 'success',
+                                            title: '🎉 Submission Successful!',
+                                            text: 'Your details have been submitted successfully.',
+                                            confirmButtonText: 'Continue',
+                                            background: '#0f172a',
+                                            color: '#fff',
+                                            confirmButtonColor: '#22c55e'
+                                        });
+                                    </script>
+                                    <%} %>
+
+
+                                        <section id="hero-section">
+
+                                            <div id="hero-container">
+                                                <div id="hero-container1">
+                                                    <div id="hero-text1">
+                                                        <span>PLAY ANY PC GAMES INSTANTLY</span>
+                                                    </div>
+
+                                                    <div id="hero-text2">
+                                                        <span>RENT PREMIUM GAME ACCOUNTS FOR A FRACTION OF THE
+                                                            COST</span>
+                                                    </div>
+
+                                                    <div id="hero-text3">
+                                                        <span>Unlock a massive library of top PC titles. No high cost
+                                                            needed, no full purchase required. Start gaming now on
+                                                            our secure, verified platform!</span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+                                        </section>
+
+                                        <section id="main">
+
+                                            <a href="/payment">
+                                                <div class="rentbtn">
+                                                    <span>Rent Now</span>
+                                                </div>
+                                            </a>
+
+                                        </section>
+
+                                        <section id="contact section">
+
+                                            <div id="contact-scroll">
+
+                                                <div id="contact-container">
+                                                    <span id="contacthead">Contact Us</span>
+                                                    <form action="/" method="post">
+
+                                                        <input type="text" name="name" class="input"
+                                                            placeholder="Player Name">
+
+                                                        <input type="text" name="email" class="input"
+                                                            placeholder="Player Email">
+
+                                                        <input type="text" name="suggestion" class="input"
+                                                            placeholder="Any Game Suggestion">
+
+                                                        <button type="reset" name="reset" class="lowerinput">RESET
+
+                                                            <button type="submit" name="submit"
+                                                                class="lowerinput">SUBMIT
+                                                    </form>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </section>
+
+                                        <footer>
+
+
+                                            <div class="footcontainer">
+                                                <div id="parent2">
+                                                    <div id="child1">
+                                                        <div class="footer-icon">
+                                                            <span id="cname2"> GigaZen</span>
+                                                        </div>
+                                                        <div class="footer-descrip">
+                                                            <span id="descrip">Rent Premuim Account Games at just a
+                                                                minimal cost
+                                                                , in
+                                                                just one
+                                                                place. Your
+                                                                Dream comes true</span>
+                                                            <br>
+                                                            <p>By A and P</p>
+                                                        </div>
+                                                        <div class="social-icons">
+                                                            <i class="fa-brands fa-square-x-twitter" id="icon1"></i>
+                                                            <i class="fa-brands fa-square-instagram" id="icon2"></i>
+                                                            <i class="fa-brands fa-square-github" id="icon3"></i>
+                                                            <i class="fa-brands fa-square-linkedin" id="icon4"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div id="myphoto">
+
+                                                    </div>
+                                                    <div id="content-container">
+
+                                                        <div class="content-1">
+                                                            <span id="content-span1">Services</span>
+                                                            <span id="content-span2">Features</span>
+                                                            <span id="content-span3">Pricing</span>
+                                                            <span id="content-span4">Random</span>
+                                                            <span id="content-span5">Changelog</span>
+                                                        </div>
+
+                                                        <div class="content-2">
+                                                            <span id="content-span6">Resources</span>
+                                                            <span id="content-span7">Documentation</span>
+                                                            <span id="content-span8">Tutorials</span>
+                                                            <span id="content-span9">Blog</span>
+                                                            <span id="content-span10">Support</span>
+                                                        </div>
+
+                                                        <div class="content-3">
+                                                            <span id="content-span11">Company</span>
+                                                            <span id="content-span12">About</span>
+                                                            <span id="content-span13">Careers</span>
+                                                            <span id="content-span14">Contact Us</span>
+                                                            <span id="content-span15">Partners</span>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </footer>
+
+</body>
+
+</html> -->
