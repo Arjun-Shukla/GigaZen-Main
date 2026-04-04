@@ -10,7 +10,6 @@ const startSession = async (req, res) => {
             });
         }
 
-        // Start session
         serverState.isBusy = true;
         serverState.currentUser = userId;
 
@@ -18,7 +17,6 @@ const startSession = async (req, res) => {
 
         serverState.sessionEndTime = Date.now() + sessionDuration;
 
-        // Auto release after time
         setTimeout(() => {
             serverState.isBusy = false;
             serverState.currentUser = null;
