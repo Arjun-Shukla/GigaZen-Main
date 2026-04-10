@@ -14,7 +14,7 @@ body {
 .navbar {
   position: fixed;
   width: 100%;
-  top: 0px;
+  top: 1rem;
   background: rgba(10, 15, 30, 0.7);
   backdrop-filter: blur(10px);
   z-index: 100;
@@ -235,9 +235,9 @@ body {
     /* background: #020617; */
     background: rgb(255, 255, 255);
     flex-direction: column;
-    width: 40px;
+    width: 4rem;
     display: none;
-    padding: 7px;
+    padding: 0.7rem;
     transition: all 0.3s ease;
     background: #00e5ff;
     box-shadow: 0 0 8px rgba(0, 229, 255, 0.7);
