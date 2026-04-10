@@ -219,8 +219,9 @@ body {
 
   .login-box {
     padding: 0rem 1.5rem;
-    /* height: auto;
-    margin: 0rem auto; */
+    height: auto;
+    /* margin: 0rem auto; */
+    margin:auto;
   }
 
   .login-box h2 {
