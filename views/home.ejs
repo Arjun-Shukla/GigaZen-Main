@@ -16,13 +16,15 @@
     <nav class="navbar">
         <div class="nav-container">
 
-            <div class="logo">GigaZen</div>
+            <div class="logo"> 
+                <!-- <img src="/img/logoNew2.png" alt="GigaZen" height="10%" width="10%"> -->
+            </div>
 
             <ul class="nav-links" id="navLinks">
                 <li><a href="/">Hub</a></li>
                 <li><a href="/payment">Plans</a></li>
                 <li><a href="#contact-container">Connect</a></li>
-                
+
                 <% if (!user) { %>
                     <a href="/login" class="loginbtn">Login</a>
                     <% } %>
@@ -35,132 +37,134 @@
         </div>
     </nav>
 
-                <% if(user) { %>
-                        <span class="userhead">Welcome <%= user.name %></span>
-                        <a href="/logout" class="logoutbtn">Logout</a>
+    <% if(user) { %>
+        <span class="userhead">Welcome <%= user.name %></span>
+        <a href="/logout" class="logoutbtn">Logout</a>
+        <% } %>
+
+
+
+            <% if(logout){ %>
+                <script>
+                    Swal.fire({
+                        title: "Logged Out 👋",
+                        text: "You have been logged out successfully!",
+                        icon: "success",
+                        timer: 2000,
+                        showConfirmButton: false,
+                        background: "#020617",
+                        color: "#22c55e"
+                    });
+                </script>
+                <% } %>
+
+                    <% if(login){ %>
+                        <script>
+                            Swal.fire({
+                                title: "Welcome 🎉",
+                                text: "Login successful!",
+                                icon: "success",
+                                timer: 2000,
+                                showConfirmButton: false,
+                                background: "#020617",
+                                color: "#22c55e"
+                            });
+                        </script>
                         <% } %>
 
 
+                            <% if(feedback){ %>
+                                <script>
+                                    Swal.fire({
+                                        icon: 'success',
+                                        title: 'Submitted!',
+                                        text: 'Your details were saved successfully.',
+                                        showConfirmButton: false,
+                                        timer: 2000
+                                    });
+                                </script>
+                                <% } %>
 
-                <% if(logout){ %>
-                    <script>
-                        Swal.fire({
-                            title: "Logged Out 👋",
-                            text: "You have been logged out successfully!",
-                            icon: "success",
-                            timer: 2000,
-                            showConfirmButton: false,
-                            background: "#020617",
-                            color: "#22c55e"
-                        });
-                    </script>
-                    <% } %>
+                                    <section class="hero">
+                                        <div class="hero-content">
 
-                        <% if(login){ %>
-                            <script>
-                                Swal.fire({
-                                    title: "Welcome 🎉",
-                                    text: "Login successful!",
-                                    icon: "success",
-                                    timer: 2000,
-                                    showConfirmButton: false,
-                                    background: "#020617",
-                                    color: "#22c55e"
-                                });
-                            </script>
-                            <% } %>
+                                            <p class="tag">PLAY ANY PC GAMES INSTANTLY</p>
 
+                                            <h1>
+                                                RENT PREMIUM GAMES FOR A FRACTION OF THE COST
+                                            </h1>
 
-                                <% if(feedback){ %>
-                                    <script>
-                                        Swal.fire({
-                                            icon: 'success',
-                                            title: 'Submitted!',
-                                            text: 'Your details were saved successfully.',
-                                            showConfirmButton: false,
-                                            timer: 2000
-                                        });
-                                    </script>
-                                    <% } %>
+                                            <p class="desc">
+                                                Unlock a massive library of top PC titles. No high cost needed,
+                                                no full purchase required. Start gaming now.
+                                            </p>
 
-                                        <section class="hero">
-                                            <div class="hero-content">
+                                            <a href="/payment" class="rentbtn">Rent Now</a>
 
-                                                <p class="tag">PLAY ANY PC GAMES INSTANTLY</p>
+                                        </div>
+                                    </section>
 
-                                                <h1>
-                                                    RENT PREMIUM GAME FOR A FRACTION OF THE COST
-                                                </h1>
+                                    <section class="contact">
+                                        <div id="contact-container">
 
-                                                <p class="desc">
-                                                    Unlock a massive library of top PC titles. No high cost needed,
-                                                    no full purchase required. Start gaming now.
-                                                </p>
+                                            <h2>Contact Us</h2>
 
-                                                <a href="/payment" class="rentbtn">Rent Now</a>
+                                            <form action="/" method="post">
+                                                <input type="text" name="name" placeholder="Player Name"
+                                                    class="upperinput">
+                                                <input type="text" name="email" placeholder="Player Email"
+                                                    class="upperinput">
+                                                <input type="text" name="suggestion" placeholder="Any Game Suggestion"
+                                                    class="upperinput">
 
+                                                <div class="form-btns">
+                                                    <button type="reset" value="Reset" class="lowerinput">RESET
+                                                        <button type="submit" value="Submit" class="lowerinput">SUBMIT
+                                                </div>
+                                            </form>
+
+                                        </div>
+                                    </section>
+
+                                    <footer class="footer">
+                                        <div class="footer-container">
+
+                                            <div>
+                                                <h2>GigaZen</h2>
+                                                <p>Rent premium games at minimal cost.</p>
                                             </div>
-                                        </section>
 
-                                        <section class="contact">
-                                            <div id="contact-container">
-
-                                                <h2>Contact Us</h2>
-
-                                                <form action="/" method="post">
-                                                    <input type="text" name="name" placeholder="Player Name"
-                                                        class="upperinput">
-                                                    <input type="text" name="email" placeholder="Player Email"
-                                                        class="upperinput">
-                                                    <input type="text" name="suggestion"
-                                                        placeholder="Any Game Suggestion" class="upperinput">
-
-                                                    <div class="form-btns">
-                                                        <button type="reset" value="Reset" class="lowerinput">RESET
-                                                            <button type="submit" value="Submit"
-                                                                class="lowerinput">SUBMIT
-                                                    </div>
-                                                </form>
-
-                                            </div>
-                                        </section>
-
-                                        <footer class="footer">
-                                            <div class="footer-container">
+                                            <div class="links">
+                                                <div>
+                                                    <h4>Services</h4>
+                                                    <p>Features</p>
+                                                    <a href="/payment">
+                                                        <p>Pricing</p>
+                                                    </a>
+                                                </div>
 
                                                 <div>
-                                                    <h2>GigaZen</h2>
-                                                    <p>Rent premium gameat minimal cost.</p>
+                                                    <h4>Resources</h4>
+                                                    <!-- <p>Docs</p> -->
+                                                    <p>Blog</p>
                                                 </div>
 
-                                                <div class="links">
-                                                    <div>
-                                                        <h4>Services</h4>
-                                                        <p>Features</p>
-                                                        <p>Pricing</p>
-                                                    </div>
-
-                                                    <div>
-                                                        <h4>Resources</h4>
-                                                        <p>Docs</p>
-                                                        <p>Blog</p>
-                                                    </div>
-
-                                                    <div>
-                                                        <h4>Company</h4>
-                                                        <p>About</p>
-                                                        <p>Contact</p>
-                                                    </div>
+                                                <div>
+                                                    <h4>Contact</h4>
+                                                    <p class="About">Arjun Shukla</p>
+                                                    <p class="About">7607104099</p>
+                                                    <p class="About">Hardoi</p>
                                                 </div>
-
                                             </div>
-                                        </footer>
 
-                                        <script>
-                                            function toggleMenu() {
-                                                document.getElementById("navLinks").classList.toggle("active");
-                                            }
-                                        </script>
+                                        </div>
+                                    </footer>
+
+                                    <script>
+                                        function toggleMenu() {
+                                            document.getElementById("navLinks").classList.toggle("active");
+                                        }
+                                    </script>
 
 </body>
 
