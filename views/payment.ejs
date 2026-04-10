@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Page</title>
     <link rel="stylesheet" href="css/payment.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <!-- <link rel="stylesheet" href="css/navbar.css"> -->
+    <!-- <link rel="stylesheet" href="css/footer.css"> -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -17,137 +17,158 @@
 
 <body>
 
-    <%- include("../partials/navbar") %>
+    <nav class="navbar">
+        <div class="nav-container">
 
-        <button onclick="startGaming()" id="btnstart">Start Server</button>
-        <div id="result" style="margin-left:20px;"></div>
+            <div class="logo">GigaZen</div>
 
-        <div class="container">
-            <div class="cards">
-                <div class="card-heading">
-                    <p>ZEN BASIC</p>
-                    <p>₹399/month</p>
-                </div>
-                <div id="firstcard">
-                    <p id="first">3 Indie Games</p>
-                    <p id="second">30 hrs/month</p>
-                    <p id="third">720p</p>
-                    <p id="fourth">Instant Delievery</p>
-                </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Hub</a></li>
+                <li><a href="/payment">Plans</a></li>
+                <li><a href="#contact-container">Connect</a></li>
+            </ul>
 
-                <button class="paybtn" onclick="createOrder(399)">
-                    RENT NOW
-                </button>
-
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
             </div>
-            <div class="cards">
 
-                <div class="card-heading">
-                    <p>ZEN PREMIUM</p>
-                    <p>₹999/month</p>
-                </div>
-                <div id="firstcard">
-                    <p id="first">8-10 Games</p>
-                    <p id="second">2-3 Premium Games</p>
-                    <p id="third">80 hr/month</p>
-                    <p id="fourth">1080p</p>
-                </div>
-
-                <button class="paybtn" onclick="createOrder(999)">
-                    RENT NOW
-                </button>
-
-            </div>
-            <div class="cards">
-
-                <div class="card-heading">
-                    <p>ZEN PREMIUM +</p>
-                    <p>₹1499/month</p>
-                </div>
-                <div id="firstcard">
-                    <p id="first">15-20 Games</p>
-                    <p id="second">5-6 Premium Games</p>
-                    <p id="third">120 hrs/month</p>
-                    <p id="fourth">High performance</p>
-                </div>
-
-                <button class="paybtn" onclick="createOrder(1499)">
-                    RENT NOW
-                </button>
-
-
-            </div>
         </div>
+    </nav>
 
-        <!-- <%- include("../partials/footer") %> -->
+    <!-- <button onclick="startGaming()" id="btnstart">Start Server</button>
+        <div id="result" style="margin-left:20px;"></div> -->
 
-        <script>
+    <div class="container">
+        <div class="cards">
+            <div class="card-heading">
+                <p>ZEN BASIC</p>
+                <p>₹399/month</p>
+            </div>
+            <div id="firstcard">
+                <p id="first">3 Indie Games</p>
+                <p id="second">30 hrs/month</p>
+                <p id="third">720p</p>
+                <p id="fourth">Instant Delievery</p>
+            </div>
 
-            async function createOrder(amount) {
+            <button class="paybtn" onclick="createOrder(399)">
+                RENT NOW
+            </button>
 
-                const res = await fetch("/payment/create-order", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({
-                        amount: amount
-                    })
+        </div>
+        <div class="cards">
+
+            <div class="card-heading">
+                <p>ZEN PREMIUM</p>
+                <p>₹999/month</p>
+            </div>
+            <div id="firstcard">
+                <p id="first">8-10 Games</p>
+                <p id="second">2-3 Premium Games</p>
+                <p id="third">80 hr/month</p>
+                <p id="fourth">1080p</p>
+            </div>
+
+            <button class="paybtn" onclick="createOrder(999)">
+                RENT NOW
+            </button>
+
+        </div>
+        <div class="cards">
+
+            <div class="card-heading">
+                <p>ZEN PREMIUM +</p>
+                <p>₹1499/month</p>
+            </div>
+            <div id="firstcard">
+                <p id="first">15-20 Games</p>
+                <p id="second">5-6 Premium Games</p>
+                <p id="third">120 hrs/month</p>
+                <p id="fourth">High performance</p>
+            </div>
+
+            <button class="paybtn" onclick="createOrder(1499)">
+                RENT NOW
+            </button>
+
+
+        </div>
+    </div>
+
+    <!-- <%- include("../partials/footer") %> -->
+
+    <script>
+
+        async function createOrder(amount) {
+
+            const res = await fetch("/payment/create-order", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    amount: amount
                 })
+            })
 
-                const order = await res.json();
+            const order = await res.json();
 
-                const options = {
-                    key: "rzp_test_SXyVmneVBmdXh2",
-                    amount: order.amount,
-                    currency: "INR",
-                    name: "gigazen",
-                    description: "Game Account Rental Platform",
-                    order_id: order.id,
-                    handler: function (response) {
-                        alert("Payment Successful");
-                        let button = document.getElementById("btnstart");
-                        button.style.display = "flex";
-                        console.log(response);
-                    }
-                }
-
-                const rzp = new Razorpay(options);
-                rzp.open();
-            }
-
-            async function startGaming() {
-                const res = await fetch("/session/start", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    }
-                });
-
-                const data = await res.json();
-                if (res.ok) {
-                    document.getElementById("result").innerHTML = `
-            <p>✅ ${data.message}</p>
-            <p><b>IP:</b> <span id="ipText">${data.ip}</span></p>
-            <button onclick="copyIP()">Copy IP</button>
-        `;
-                } else {
-                    document.getElementById("result").innerHTML = `
-            <p>❌ ${data.message}</p>
-        `;
+            const options = {
+                key: "rzp_test_SXyVmneVBmdXh2",
+                amount: order.amount,
+                currency: "INR",
+                name: "gigazen",
+                description: "Game Account Rental Platform",
+                order_id: order.id,
+                handler: function (response) {
+                    alert("Payment Successful");
+                    // let button = document.getElementById("btnstart");
+                    // button.style.display = "flex";
+                    console.log(response);
                 }
             }
 
-            function copyIP() {
-                const ip = document.getElementById("ipText").innerText;
+            const rzp = new Razorpay(options);
+            rzp.open();
+        }
 
-                navigator.clipboard.writeText(ip)
-                    .then(() => alert("IP copied ✅"))
-                    .catch(() => alert("Copy failed ❌"));
-            }
-            
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("active");
+        }
 
-        </script>
+
+        //     async function startGaming() {
+        //         const res = await fetch("/session/start", {
+        //             method: "POST",
+        //             headers: {
+        //                 "Content-Type": "application/json"
+        //             }
+        //         });
+
+        //         const data = await res.json();
+        //         if (res.ok) {
+        //             document.getElementById("result").innerHTML = `
+        //     <p>✅ ${data.message}</p>
+        //     <p><b>IP:</b> <span id="ipText">${data.ip}</span></p>
+        //     <button onclick="copyIP()">Copy IP</button>
+        // `;
+        //         } else {
+        //             document.getElementById("result").innerHTML = `
+        //     <p>❌ ${data.message}</p>
+        // `;
+        //         }
+        //     }
+
+        //     function copyIP() {
+        //         const ip = document.getElementById("ipText").innerText;
+
+        //         navigator.clipboard.writeText(ip)
+        //             .then(() => alert("IP copied ✅"))
+        //             .catch(() => alert("Copy failed ❌"));
+        //     }
+
+
+    </script>
 
 </body>
 

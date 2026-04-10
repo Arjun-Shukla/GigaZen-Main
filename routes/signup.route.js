@@ -2,7 +2,7 @@ const express = require("express");
 
 const router = express.Router();
 
-//routes
+//routes...
 router.get("/", (req, res) => {
 
   const register = req.query.register;
