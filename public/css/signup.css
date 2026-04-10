@@ -173,8 +173,8 @@ select.input-field {
 
 @media (max-width: 768px) {
   .signup-box {
-    width: 80%;
-    padding: 2rem;
+    width: 90%;
+    padding: 1rem;
     font-size: 2rem;
   }
 }
