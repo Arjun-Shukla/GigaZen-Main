@@ -210,10 +210,17 @@ body {
   color: white;
 }
 @media (max-width: 768px) {
+
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .login-box {
     padding: 0rem 1.5rem;
-    height: auto;
-    margin: 0rem auto;
+    /* height: auto;
+    margin: 0rem auto; */
   }
 
   .login-box h2 {
