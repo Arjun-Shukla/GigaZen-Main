@@ -6,32 +6,80 @@
     <style>
         body {
             background-color: #020617;
+        }
+
+        .container {
             color: white;
             font-family: Arial;
-            padding: 40px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+            gap: 3rem;
+        }
+
+        .container p {
+            font-size: 1.6rem;
+            line-height: 1.5rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container h1 {
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .container p {
+                font-size: 2rem;
+                line-height: 2rem;
+                width: 100%;
+                text-align: center;
+            }
+
+            .text {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container h1 {
+                text-align: center;
+            }
         }
     </style>
-     <link rel="icon" type="image/png" href="/img/logoNew2.ico">
+    <link rel="icon" type="image/png" href="/img/logoNew2.ico">
 </head>
 
 <body>
 
-    <h1>Refund Policy</h1>
+    <div class="container">
 
-    <p>All purchases made on GigaZen are final.</p>
+        <h1>Refund Policy</h1>
 
-    <p>Since our services are digital, refunds are not applicable once the service has been activated.</p>
+        <div class="text">
 
-    <p>In case of technical issues, contact us within 24 hours.</p>
+            <p>All purchases made on GigaZen are final.</p>
 
-    <p>Refunds (if applicable) will be processed within 5-7 business days.</p>
+            <p>Since our services are digital, refunds are not applicable once the service has been activated.</p>
 
-    <p>Contact: shuklarashmi289@gmail.com</p>
+            <p>In case of technical issues, contact us within 24 hours.</p>
+
+            <p>Refunds (if applicable) will be processed within 5-7 business days.</p>
+
+            <p>Contact: shuklarashmi289@gmail.com</p>
+
+        </div>
+
+
+
+
+    </div>
+
 
 </body>
 

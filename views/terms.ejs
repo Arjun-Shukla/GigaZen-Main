@@ -6,14 +6,50 @@
     <style>
         body {
             background-color: #020617;
+        }
+
+        .container {
             color: white;
             font-family: Arial;
-            padding: 40px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+            gap: 3rem;
+        }
+
+        .container p {
+            font-size: 1.6rem;
+            line-height: 1.5rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container h1 {
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .container p {
+                font-size: 2rem;
+                line-height: 2rem;
+                width: 100%;
+                text-align: center;
+            }
+
+            .text {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container h1 {
+                text-align: center;
+            }
         }
     </style>
     <link rel="icon" type="image/png" href="/img/logoNew2.ico">
@@ -21,19 +57,31 @@
 
 <body>
 
-    <h1>Terms & Conditions</h1>
 
-    <p>By using GigaZen, you agree to these terms.</p>
+    <div class="container">
 
-    <p>Users must provide accurate information.</p>
+        <h1>Terms & Conditions</h1>
 
-    <p>Services are provided on a rental basis and are non-transferable.</p>
+        <div class="text">
 
-    <p>Unauthorized use is strictly prohibited.</p>
+            <p>By using GigaZen, you agree to these terms.</p>
 
-    <p>We are not responsible for interruptions due to external issues.</p>
+            <p>Users must provide accurate information.</p>
 
-    <p>Contact: shuklarashmi289@gmail.com</p>
+            <p>Services are provided on a rental basis and are non-transferable.</p>
+
+            <p>Unauthorized use is strictly prohibited.</p>
+
+            <p>We are not responsible for interruptions due to external issues.</p>
+
+            <p>Contact: shuklarashmi289@gmail.com</p>
+
+        </div>
+
+
+
+    </div>
+
 
 </body>
 

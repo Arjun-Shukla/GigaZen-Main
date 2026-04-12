@@ -14,7 +14,7 @@ body {
 .navbar {
   position: fixed;
   width: 100%;
-  top: 1.2rem;
+  top: 1.5rem;
   background: rgba(10, 15, 30, 0.7);
   backdrop-filter: blur(10px);
   z-index: 100;
@@ -34,13 +34,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.1rem;
+  padding: 0.3rem;
 }
 
 .logo {
   /* font-size: 1.5rem;
   color: #00e5ff; */
-  background: url('/img/logoNew2.png');
+  background: url("/img/logoNew2.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -326,5 +326,6 @@ body {
 
   .nav-links {
     gap: 2rem;
+    top: 2.8rem;
   }
 }
