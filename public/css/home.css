@@ -359,6 +359,7 @@ body {
 .About {
   color: #ff6a00;
   width: 50%;
+  line-height: 1.5rem;
 }
 
 .links {
@@ -369,6 +370,10 @@ body {
 
 .links a {
   text-decoration: none;
+}
+
+.resource{
+  line-height: 1.5rem;
 }
 
 /* MOBILE */
@@ -433,15 +438,20 @@ body {
   }
 
   .links {
-    gap: 2rem;
+    gap: 1rem;
     margin-top: 2rem;
   }
 
   .links a {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .About {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
+
+  .resource{
+  line-height: 1.2rem;
+  width: 8rem;
+}
 }
