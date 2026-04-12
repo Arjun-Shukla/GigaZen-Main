@@ -368,12 +368,12 @@ body {
 
 .About {
   color: #ff6a00;
-  width: 6rem;
+  width: 50%;
 }
 
 .links {
   display: flex;
-  gap: 5rem;
+  gap: 4rem;
   margin-top: 1.5rem;
 }
 
@@ -440,5 +440,18 @@ body {
 
   .logoutbtn {
     z-index: 50;
+  }
+
+  .links{
+    gap:1.5rem;
+    margin-top: 2rem;
+  }
+
+  .links a{
+    font-size: 0.8rem;
+  }
+
+  .About{
+    font-size: 0.8rem;
   }
 }

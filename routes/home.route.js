@@ -20,6 +20,22 @@ router.get("/", authCheck, (req, res) => {
   });
 });
 
+router.get('/about' , (req,res)=>{
+  res.render('aboutus');
+});
+
+router.get('/privacy' , (req,res)=>{
+  res.render('privacy');
+});
+
+router.get('/refund' , (req,res)=>{
+  res.render('refund');
+});
+
+router.get('/terms' , (req,res)=>{
+  res.render('terms');
+});
+
 router.post("/", async (req, res) => {
 
   const suggestion = req.body;
