@@ -119,9 +119,7 @@ body {
 }
 
 .logo {
-  /* font-size: 1.5rem;
-  color: #00e5ff; */
-  background: url('/img/logoNew2.png');
+  background: url("/img/logoNew2.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -164,19 +162,11 @@ body {
   width: 100%;
 }
 
-/* HAMBURGER */
 .hamburger {
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
 }
-
-/* TOP RIGHT */
-/* .top-right {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-} */
 
 .btn {
   padding: 0.5rem 1rem;
@@ -377,7 +367,7 @@ body {
   margin-top: 1.5rem;
 }
 
-.links a{
+.links a {
   text-decoration: none;
 }
 
@@ -442,16 +432,16 @@ body {
     z-index: 50;
   }
 
-  .links{
-    gap:1.5rem;
+  .links {
+    gap: 2rem;
     margin-top: 2rem;
   }
 
-  .links a{
-    font-size: 0.8rem;
+  .links a {
+    font-size: 0.9rem;
   }
 
-  .About{
-    font-size: 0.8rem;
+  .About {
+    font-size: 0.9rem;
   }
 }
