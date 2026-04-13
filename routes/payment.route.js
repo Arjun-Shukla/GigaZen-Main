@@ -7,7 +7,7 @@ const paymenthandle = require('../controllers/payment.controller');
 
 router.get('/' , isAuth ,(req,res)=>{
     res.render("payment");
-})
+});
 
 router.post('/create-order' , paymenthandle.createOrder);
 

@@ -5,12 +5,27 @@ const cookieParser = require('cookie-parser');
 //models
 const User = require("../models/user.model");
 
+//sendmail
+const sendmail = require("../config/mailsend");
+
 exports.signup = async (req, res) => {
   const user = req.body;
 
   try {
 
     await User.create(user);
+    sendmail(`"${user.email}"`,
+       "Registration Successfull",
+        `Hi ${user.name} ,
+
+Your GigaZen account is now live 🚀
+
+Start exploring and rent your favorite games today 🎮
+
+Need help? support@gigazen.in
+
+- Team GigaZen`);
+
     res.redirect("/login?success=1");
 
   } 
