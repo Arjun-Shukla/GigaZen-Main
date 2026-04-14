@@ -518,16 +518,16 @@ body {
   }
 
   .links {
-    gap: 1rem;
+    gap: 1.5rem;
     margin-top: 2rem;
   }
 
   .links a {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .About {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .resource {
