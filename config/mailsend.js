@@ -4,9 +4,9 @@ const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport({
 
-    secure:true,
+    secure:false,
     host:'smtp.gmail.com',
-    port:465,
+    port:587,
     auth:{
         user:'noreply@gigazen.in',
         pass:'lbjwyxwywlnhtoba'
@@ -16,6 +16,7 @@ const transporter = nodemailer.createTransport({
 function sendmail(to,subject,msg){
 
     transporter.sendMail({
+        from: '"GigaZen" <noreply@gigazen.in>',
         to:to,
         subject:subject,
         html:msg
