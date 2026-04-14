@@ -12,169 +12,187 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-         <link rel="icon" type="image/png" href="/img/logoNew2.ico">
+    <link rel="icon" type="image/png" href="/img/logoNew2.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <div class="nav-container">
+    <% if(mail){ %>
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Email Sent Successfully 🚀',
+                html: `
+    <p>We’ve sent your payment details to your registered email.</p>
+    <p>Please check your inbox (and spam folder if needed) 📩</p>
+  `,
+                confirmButtonText: 'OK',
+                confirmButtonColor: '#ff5722'
+            });
+        </script>
+        <% } %>
 
-            <div class="logo"> 
-                <!-- <img src="/img/logoNew2.png" alt="GigaZen" height="10%" width="10%"> -->
-            </div>
-            
-            <ul class="nav-links" id="navLinks">
-                <li><a href="/">Hub</a></li>
-                <li><a href="/payment">Plans</a></li>
-                <li><a href="#contact-container">Connect</a></li>
-            </ul>
+            <nav class="navbar">
+                <div class="nav-container">
 
-            <div class="hamburger" onclick="toggleMenu()">
-                <i class="fa-solid fa-bars"></i>
-            </div>
+                    <div class="logo">
+                        <!-- <img src="/img/logoNew2.png" alt="GigaZen" height="10%" width="10%"> -->
+                    </div>
 
-        </div>
-    </nav>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="/">Hub</a></li>
+                        <li><a href="/payment">Plans</a></li>
+                        <li><a href="#contact-container">Connect</a></li>
+                    </ul>
 
-    <!-- <button onclick="startGaming()" id="btnstart">Start Server</button>
+                    <div class="hamburger" onclick="toggleMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+
+                </div>
+            </nav>
+
+            <!-- <button onclick="startGaming()" id="btnstart">Start Server</button>
         <div id="result" style="margin-left:20px;"></div> -->
 
-    <div class="container">
-        <div class="cards">
-            <div class="card-heading">
-                <p>ZEN BASIC</p>
-                <p class="outstock">OUT OF STOCK</p>
-                <p>₹299 / month</p>
+            <div class="container">
+                <div class="cards">
+                    <div class="card-heading">
+                        <p>ZEN BASIC</p>
+                        <p class="outstock">OUT OF STOCK</p>
+                        <p>₹299 / month</p>
+                    </div>
+                    <div id="firstcard">
+                        <p id="first">3 games</p>
+                        <p id="second">0 premium game</p>
+                        <p id="third">60 hrs/month</p>
+                        <p id="fourth">24*7 support</p>
+                    </div>
+
+                    <a href="/payment/1" class="paybtn">
+                        RENT NOW
+                    </a>
+
+                    </button>
+
+                </div>
+                <div class="cards">
+
+                    <div class="card-heading">
+                        <p>ZEN PREMIUM</p>
+                        <p class="outstock">OUT OF STOCK</p>
+                        <p>₹499 / month</p>
+                    </div>
+                    <div id="firstcard">
+                        <p id="first">8-10 games</p>
+                        <p id="second">3 premium games</p>
+                        <p id="third">90 hrs/month</p>
+                        <p id="fourth">24*7 support</p>
+                    </div>
+
+                    <a href="/payment/2" class="paybtn">
+                        RENT NOW
+                    </a>
+
+                </div>
+                <div class="cards">
+
+                    <div class="card-heading">
+                        <p>ZEN PREMIUM +</p>
+                        <p class="stock">IN STOCK</p>
+                        <p>₹1199 / month</p>
+                    </div>
+                    <div id="firstcard">
+                        <p id="first">15-20 games</p>
+                        <p id="second">8-10 premium games</p>
+                        <p id="third">120 hrs/month</p>
+                        <p id="fourth">24*7 support</p>
+                    </div>
+
+                    <a href="/payment/3" class="paybtn">
+                        RENT NOW
+                    </a>
+
+                </div>
             </div>
-            <div id="firstcard">
-                <p id="first">3 games</p>
-                <p id="second">0 premium game</p>
-                <p id="third">60 hrs/month</p>
-                <p id="fourth">24*7 support</p>
-            </div>
 
-            <button class="paybtn" onclick="createOrder(299)">
-                RENT NOW
-            </button>
+            <!-- <%- include("../partials/footer") %> -->
 
-        </div>
-        <div class="cards">
+            <script>
 
-            <div class="card-heading">
-                <p>ZEN PREMIUM</p>
-                <p class="outstock">OUT OF STOCK</p>
-                <p>₹499 / month</p>
-            </div>
-            <div id="firstcard">
-                <p id="first">8-10 games</p>
-                <p id="second">3 premium games</p>
-                <p id="third">90 hrs/month</p>
-                <p id="fourth">24*7 support</p>
-            </div>
+                // async function createOrder(amount) {
 
-            <button class="paybtn" onclick="createOrder(499)">
-                RENT NOW
-            </button>
+                //     const res = await fetch("/payment/create-order", {
+                //         method: "POST",
+                //         headers: {
+                //             "Content-Type": "application/json"
+                //         },
+                //         body: JSON.stringify({
+                //             amount: amount
+                //         })
+                //     })
 
-        </div>
-        <div class="cards">
+                //     const order = await res.json();
 
-            <div class="card-heading">
-                <p>ZEN PREMIUM +</p>
-                <p class="stock">IN STOCK</p>
-                <p>₹1199 / month</p>
-            </div>
-            <div id="firstcard">
-                <p id="first">15-20 games</p>
-                <p id="second">8-10 premium games</p>
-                <p id="third">120 hrs/month</p>
-                <p id="fourth">24*7 support</p>
-            </div>
+                //     const options = {
+                //         key: "rzp_test_SXyVmneVBmdXh2",
+                //         amount: order.amount,
+                //         currency: "INR",
+                //         name: "gigazen",
+                //         description: "Game Account Rental Platform",
+                //         order_id: order.id,
+                //         handler: function (response) {
+                //             alert("Payment Successful");
+                //             // let button = document.getElementById("btnstart");
+                //             // button.style.display = "flex";
+                //             console.log(response);
+                //         }
+                //     }
 
-            <button class="paybtn" onclick="createOrder(1199)">
-                RENT NOW
-            </button>
+                //     const rzp = new Razorpay(options);
+                //     rzp.open();
+                // }
 
-
-        </div>
-    </div>
-
-    <!-- <%- include("../partials/footer") %> -->
-
-    <script>
-
-        async function createOrder(amount) {
-
-            const res = await fetch("/payment/create-order", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    amount: amount
-                })
-            })
-
-            const order = await res.json();
-
-            const options = {
-                key: "rzp_test_SXyVmneVBmdXh2",
-                amount: order.amount,
-                currency: "INR",
-                name: "gigazen",
-                description: "Game Account Rental Platform",
-                order_id: order.id,
-                handler: function (response) {
-                    alert("Payment Successful");
-                    // let button = document.getElementById("btnstart");
-                    // button.style.display = "flex";
-                    console.log(response);
+                function toggleMenu() {
+                    document.getElementById("navLinks").classList.toggle("active");
                 }
-            }
-
-            const rzp = new Razorpay(options);
-            rzp.open();
-        }
-
-        function toggleMenu() {
-            document.getElementById("navLinks").classList.toggle("active");
-        }
 
 
-        //     async function startGaming() {
-        //         const res = await fetch("/session/start", {
-        //             method: "POST",
-        //             headers: {
-        //                 "Content-Type": "application/json"
-        //             }
-        //         });
+                //     async function startGaming() {
+                //         const res = await fetch("/session/start", {
+                //             method: "POST",
+                //             headers: {
+                //                 "Content-Type": "application/json"
+                //             }
+                //         });
 
-        //         const data = await res.json();
-        //         if (res.ok) {
-        //             document.getElementById("result").innerHTML = `
-        //     <p>✅ ${data.message}</p>
-        //     <p><b>IP:</b> <span id="ipText">${data.ip}</span></p>
-        //     <button onclick="copyIP()">Copy IP</button>
-        // `;
-        //         } else {
-        //             document.getElementById("result").innerHTML = `
-        //     <p>❌ ${data.message}</p>
-        // `;
-        //         }
-        //     }
+                //         const data = await res.json();
+                //         if (res.ok) {
+                //             document.getElementById("result").innerHTML = `
+                //     <p>✅ ${data.message}</p>
+                //     <p><b>IP:</b> <span id="ipText">${data.ip}</span></p>
+                //     <button onclick="copyIP()">Copy IP</button>
+                // `;
+                //         } else {
+                //             document.getElementById("result").innerHTML = `
+                //     <p>❌ ${data.message}</p>
+                // `;
+                //         }
+                //     }
 
-        //     function copyIP() {
-        //         const ip = document.getElementById("ipText").innerText;
+                //     function copyIP() {
+                //         const ip = document.getElementById("ipText").innerText;
 
-        //         navigator.clipboard.writeText(ip)
-        //             .then(() => alert("IP copied ✅"))
-        //             .catch(() => alert("Copy failed ❌"));
-        //     }
+                //         navigator.clipboard.writeText(ip)
+                //             .then(() => alert("IP copied ✅"))
+                //             .catch(() => alert("Copy failed ❌"));
+                //     }
 
 
-    </script>
+            </script>
 
 </body>
 

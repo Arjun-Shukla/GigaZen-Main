@@ -42,6 +42,7 @@ body {
   margin-bottom: 10px;
   font-size: 22px;
   color: #22d3ee;
+      font-family: 'Orbitron', sans-serif;
 }
 
 .signup-box p {
@@ -49,6 +50,7 @@ body {
   font-size: 14px;
   color: #ffffff;
   margin-bottom: 20px;
+      font-family: 'Poppins', sans-serif;
 }
 
 /* Input fields */
@@ -104,6 +106,7 @@ select.input-field {
   color: #ffffff;
   border: none;
   background: #2979ff;
+      font-family: 'Orbitron', sans-serif;
 }
 
 .btn:hover {
