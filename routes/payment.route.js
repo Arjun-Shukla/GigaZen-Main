@@ -151,13 +151,13 @@ router.get('/3' , isAuth , async(req,res)=>{
 
     <p>You're just one step away from unlocking your gaming experience on <b>GigaZen 🚀</b></p>
 
-    <h3>📦 Selected Plan: ZEN PRIMIUM +</h3>
+    <h3>📦 Selected Plan: ZEN PREMIUM +</h3>
     <p>💰 Price: <b>₹1199 / month</b></p>
 
     <h3>🎮 What you get:</h3>
     <ul>
-      <li>15–20 games access</li>
-      <li>8–10 premium games</li>
+      <li>15-20 games access</li>
+      <li>8-10 premium games</li>
       <li>120 hrs/month gameplay</li>
       <li>24×7 priority support</li>
     </ul>
