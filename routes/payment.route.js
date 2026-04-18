@@ -172,7 +172,7 @@ router.get('/3' , isAuth , async(req,res)=>{
   <div>
 
     <img src="https://gigazen.in/img/Promotion.png"
-         width="120"
+         width="500"
          style="margin:5px; border-radius:8px;" />
 
   </div>

@@ -32,7 +32,7 @@ exports.signup = async (req, res) => {
       <img 
         src="https://gigazen.in/img/logogigazen2.jpeg" 
         alt="GigaZen Logo"
-        width="80"
+        width="100"
         style="margin-bottom:15px;"
       />
       
