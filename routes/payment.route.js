@@ -162,6 +162,27 @@ router.get('/3' , isAuth , async(req,res)=>{
       <li>24×7 priority support</li>
     </ul>
 
+        <div style="text-align:center; margin-top:25px; font-family: Arial;">
+
+  <h3 style="margin-bottom:15px;">
+    🎮 Games Available in Your Plan
+  </h3>
+
+  <!-- GAME IMAGES -->
+  <div>
+
+    <img src="https://gigazen.in/img/Promotion.png"
+         width="120"
+         style="margin:5px; border-radius:8px;" />
+
+  </div>
+
+  <p style="font-size:13px; color:#666; margin-top:10px;">
+    And many more exciting games in future 🚀
+  </p>
+
+</div>
+
     <p><b>👉 Complete your payment to start playing instantly:</b></p>
 
  <p>💳 UPI: arjun99@fam</p>
