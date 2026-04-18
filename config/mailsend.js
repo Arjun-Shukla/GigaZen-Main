@@ -13,9 +13,9 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-function sendmail(to,subject,msg){
+async function sendmail(to,subject,msg){
 
-    transporter.sendMail({
+  return await  transporter.sendMail({
         from: '"GigaZen" <noreply@gigazen.in>',
         to:to,
         subject:subject,

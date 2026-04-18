@@ -14,6 +14,10 @@ router.get('/' , isAuth ,(req,res)=>{
     });
 });
 
+router.get('/299' , (req,res)=>{
+    res.redirect("upi://pay?pa=arjun99@fam&pn=GigaZen&am=299&cu=INR");
+});
+
 router.get('/1' , isAuth , async (req,res)=>{
 
         try {
@@ -25,30 +29,40 @@ router.get('/1' , isAuth , async (req,res)=>{
     const name = req.user.name;
     await sendmail(`${email}`,
         "Complete Your GigaZen Plan 🎮" , 
-        `Hi ${name},
+        `<div style="font-family: Arial; line-height: 1.6;">
+    <h2>Hi ${name} 👋</h2>
 
-You're just one step away from unlocking your gaming experience on GigaZen 🚀
+    <p>You're just one step away from unlocking your gaming experience on <b>GigaZen 🚀</b></p>
 
-🧾 Selected Plan: ZEN BASIC
-💰 Price: 299 / month
+    <h3>📦 Selected Plan: ZEN BASIC</h3>
+    <p>💰 Price: <b>₹299 / month</b></p>
 
-🎮 What you get:
-• 3 games access
-• 0 premium games
-• 60 hrs/month gameplay
-• 24×7 support
+    <h3>🎮 What you get:</h3>
+    <ul>
+      <li>3 games access</li>
+      <li>0 premium games</li>
+      <li>60 hrs/month gameplay</li>
+      <li>24×7 support</li>
+    </ul>
 
-👉 Complete your payment to start playing instantly:
+    <p><b>👉 Complete your payment to start playing instantly:</b></p>
 
-🔗 UPI - arjun99@fam
-🔗 Number - 6306380335
+ <p>💳 UPI: arjun99@fam</p>
+    <p>📞 Number: 6306380335</p>
 
-If you have any questions, feel free to reach out at support@gigazen.in
+    <br/>
 
-Let the games begin 🔥
+    <a href="https://gigazen.in/payment/299"
+      style="padding:12px 20px; background:black; color:white; text-decoration:none; border-radius:5px;">
+      Complete Payment
+    </a>
+    <br/><br/>
+    <p>If you have any questions, feel free to reach out at <b>support@gigazen.in</b></p>
 
-- Team GigaZen
-🌐 www.gigazen.in`
+    <p>🔥 Let the games begin</p>
+
+    <p>- Team GigaZen</p>
+  </div>`
     );
 res.redirect('/payment?mail=1');
 
@@ -56,6 +70,10 @@ res.redirect('/payment?mail=1');
         console.log(err);
         res.send("Error sending mail");
     }
+});
+
+router.get('/499' , (req,res)=>{
+    res.redirect("upi://pay?pa=arjun99@fam&pn=GigaZen&am=499&cu=INR");
 });
 
 router.get('/2' , isAuth , async (req,res)=>{
@@ -69,30 +87,40 @@ router.get('/2' , isAuth , async (req,res)=>{
     const name = req.user.name;
     await sendmail(`${email}`,
         "Complete Your GigaZen Plan 🎮" , 
-        `Hi ${name},
+        ` <div style="font-family: Arial; line-height: 1.6;">
+    <h2>Hi ${name} 👋</h2>
 
-You're just one step away from unlocking your gaming experience on GigaZen 🚀
+    <p>You're just one step away from unlocking your gaming experience on <b>GigaZen 🚀</b></p>
 
-🧾 Selected Plan: ZEN PREMIUM
-💰 Price: 499 / month
+    <h3>📦 Selected Plan: ZEN PREMIUM</h3>
+    <p>💰 Price: <b>₹499 / month</b></p>
 
-🎮 What you get:
-• 8-10 games access
-• 3 premium games
-• 90 hrs/month gameplay
-• 24×7 support
+    <h3>🎮 What you get:</h3>
+    <ul>
+      <li>8-10 games access</li>
+      <li>3 premium games</li>
+      <li>90 hrs/month gameplay</li>
+      <li>24×7 support</li>
+    </ul>
 
-👉 Complete your payment to start playing instantly:
+    <p><b>👉 Complete your payment to start playing instantly:</b></p>
+ <p>💳 UPI: arjun99@fam</p>
+    <p>📞 Number: 6306380335</p>
 
-🔗 UPI - arjun99@fam
-🔗 Number - 6306380335
+    <br/>
 
-If you have any questions, feel free to reach out at support@gigazen.in
+    <a href="https://gigazen.in/payment/499"
+      style="padding:12px 20px; background:black; color:white; text-decoration:none; border-radius:5px;">
+      Complete Payment
+    </a>
 
-Let the games begin 🔥
+    <br/><br/>
+    <p>If you have any questions, feel free to reach out at <b>support@gigazen.in</b></p>
 
-- Team GigaZen
-🌐 www.gigazen.in`
+    <p>🔥 Let the games begin</p>
+
+    <p>- Team GigaZen</p>
+  </div>`
     );
 res.redirect('/payment?mail=1');
 
@@ -101,6 +129,10 @@ res.redirect('/payment?mail=1');
         res.send("Error sending mail");
     }
 
+});
+
+router.get('/1199' , (req,res)=>{
+    res.redirect("upi://pay?pa=arjun99@fam&pn=GigaZen&am=1199&cu=INR");
 });
 
 router.get('/3' , isAuth , async(req,res)=>{
@@ -114,30 +146,41 @@ router.get('/3' , isAuth , async(req,res)=>{
     const name = req.user.name;
    await sendmail(`${email}`,
         "Complete Your GigaZen Plan 🎮" , 
-        `Hi ${name},
+        ` <div style="font-family: Arial; line-height: 1.6;">
+    <h2>Hi ${name} 👋</h2>
 
-You're just one step away from unlocking your gaming experience on GigaZen 🚀
+    <p>You're just one step away from unlocking your gaming experience on <b>GigaZen 🚀</b></p>
 
-🧾 Selected Plan: ZEN BASIC
-💰 Price: 1199 / month
+    <h3>📦 Selected Plan: ZEN PRO</h3>
+    <p>💰 Price: <b>₹1199 / month</b></p>
 
-🎮 What you get:
-• 15-20 games access
-• 8-10 premium games
-• 120 hrs/month gameplay
-• 24×7 support
+    <h3>🎮 What you get:</h3>
+    <ul>
+      <li>15–20 games access</li>
+      <li>8–10 premium games</li>
+      <li>120 hrs/month gameplay</li>
+      <li>24×7 priority support</li>
+    </ul>
 
-👉 Complete your payment to start playing instantly:
+    <p><b>👉 Complete your payment to start playing instantly:</b></p>
 
-🔗 UPI - arjun99@fam
-🔗 Number - 6306380335
+ <p>💳 UPI: arjun99@fam</p>
+    <p>📞 Number: 6306380335</p>
 
-If you have any questions, feel free to reach out at support@gigazen.in
+    <br/>
 
-Let the games begin 🔥
+    <a href="https://gigazen.in/payment/1199"
+      style="padding:12px 20px; background:black; color:white; text-decoration:none; border-radius:5px;">
+      Complete Payment
+    </a>
 
-- Team GigaZen
-🌐 www.gigazen.in`
+    <br/><br/>
+    <p>If you have any questions, feel free to reach out at <b>support@gigazen.in</b></p>
+
+    <p>🔥 Let the games begin</p>
+
+    <p>- Team GigaZen</p>
+  </div>`
     );
 res.redirect('/payment?mail=1');
 
