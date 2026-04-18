@@ -49,7 +49,7 @@ router.get('/1' , isAuth , async (req,res)=>{
 
  <p>💳 UPI: arjun99@fam</p>
     <p>📞 Number: 6306380335</p>
-
+<p><b>You will get your Steam Credentials by 10 PM on WhatsApp</b></p>
     <br/>
 
     <a href="https://gigazen.in/payment/299"
@@ -106,7 +106,7 @@ router.get('/2' , isAuth , async (req,res)=>{
     <p><b>👉 Complete your payment to start playing instantly:</b></p>
  <p>💳 UPI: arjun99@fam</p>
     <p>📞 Number: 6306380335</p>
-
+<p><b>You will get your Steam Credentials by 10 PM on WhatsApp</b></p>
     <br/>
 
     <a href="https://gigazen.in/payment/499"
@@ -151,7 +151,7 @@ router.get('/3' , isAuth , async(req,res)=>{
 
     <p>You're just one step away from unlocking your gaming experience on <b>GigaZen 🚀</b></p>
 
-    <h3>📦 Selected Plan: ZEN PRO</h3>
+    <h3>📦 Selected Plan: ZEN PRIMIUM +</h3>
     <p>💰 Price: <b>₹1199 / month</b></p>
 
     <h3>🎮 What you get:</h3>
@@ -171,7 +171,7 @@ router.get('/3' , isAuth , async(req,res)=>{
   <!-- GAME IMAGES -->
   <div>
 
-    <img src="https://gigazen.in/img/Promotion.png"
+    <img src="https://gigazen.in/img/Promotion2.png"
          width="500"
          style="margin:5px; border-radius:8px;" />
 
@@ -187,7 +187,7 @@ router.get('/3' , isAuth , async(req,res)=>{
 
  <p>💳 UPI: arjun99@fam</p>
     <p>📞 Number: 6306380335</p>
-
+<p><b>You will get your Steam Credentials by 10 PM on WhatsApp</b></p>
     <br/>
 
     <a href="https://gigazen.in/payment/1199"
