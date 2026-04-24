@@ -119,78 +119,11 @@
                 </div>
             </div>
 
-            <!-- <%- include("../partials/footer") %> -->
-
             <script>
-
-                // async function createOrder(amount) {
-
-                //     const res = await fetch("/payment/create-order", {
-                //         method: "POST",
-                //         headers: {
-                //             "Content-Type": "application/json"
-                //         },
-                //         body: JSON.stringify({
-                //             amount: amount
-                //         })
-                //     })
-
-                //     const order = await res.json();
-
-                //     const options = {
-                //         key: "rzp_test_SXyVmneVBmdXh2",
-                //         amount: order.amount,
-                //         currency: "INR",
-                //         name: "gigazen",
-                //         description: "Game Account Rental Platform",
-                //         order_id: order.id,
-                //         handler: function (response) {
-                //             alert("Payment Successful");
-                //             // let button = document.getElementById("btnstart");
-                //             // button.style.display = "flex";
-                //             console.log(response);
-                //         }
-                //     }
-
-                //     const rzp = new Razorpay(options);
-                //     rzp.open();
-                // }
 
                 function toggleMenu() {
                     document.getElementById("navLinks").classList.toggle("active");
                 }
-
-
-                //     async function startGaming() {
-                //         const res = await fetch("/session/start", {
-                //             method: "POST",
-                //             headers: {
-                //                 "Content-Type": "application/json"
-                //             }
-                //         });
-
-                //         const data = await res.json();
-                //         if (res.ok) {
-                //             document.getElementById("result").innerHTML = `
-                //     <p>✅ ${data.message}</p>
-                //     <p><b>IP:</b> <span id="ipText">${data.ip}</span></p>
-                //     <button onclick="copyIP()">Copy IP</button>
-                // `;
-                //         } else {
-                //             document.getElementById("result").innerHTML = `
-                //     <p>❌ ${data.message}</p>
-                // `;
-                //         }
-                //     }
-
-                //     function copyIP() {
-                //         const ip = document.getElementById("ipText").innerText;
-
-                //         navigator.clipboard.writeText(ip)
-                //             .then(() => alert("IP copied ✅"))
-                //             .catch(() => alert("Copy failed ❌"));
-                //     }
-
 
             </script>
 

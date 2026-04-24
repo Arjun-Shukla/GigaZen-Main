@@ -98,15 +98,9 @@ exports.signup = async (req, res) => {
 exports.login = async (req, res) => {
   try {
 
-    // console.log("Request body:", req.body);
-    // console.log("Email entered:", req.body.email);
-    // console.log("Password entered:", req.body.password);
-
     const user = await User.findOne({
       email: req.body.email
     });
-
-//  console.log("User from DB:", user);
 
     if (!user) {
             //   console.log("User not found ❌");
