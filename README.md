@@ -31,6 +31,7 @@ Gigazen is a **SaaS-based web application** that allows users to **rent premium 
 
 ```
 Gigazen/
+│── middlewares/
 │── models/
 │── routes/
 │── controllers/
