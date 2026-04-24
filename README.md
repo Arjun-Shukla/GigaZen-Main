@@ -101,7 +101,7 @@ Environment variables are managed through the hosting dashboard.
 * 🧠 AI-based pricing suggestions
 * 📱 Mobile responsiveness improvements and UI Improvements
 * ⭐ Rating & review system
-* 🧾 User Dashboard
+* 🧾 User Dashboard and Real time data
 
 ---
 
