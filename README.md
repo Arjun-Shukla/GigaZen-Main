@@ -2,7 +2,7 @@
 
 ### Game Account Rental SaaS Platform
 
-Gigazen is a **SaaS-based web application** that allows users to **rent premium game accounts securely and efficiently**. It provides a seamless platform for account owners to list their accounts and for users to rent them on demands.
+Gigazen is a **SaaS-based web application** that allows users to **rent premium game accounts securely and efficiently**. It provides a seamless platform for account owners to list their accounts and for users to rent them on demand.
 
 ---
 
