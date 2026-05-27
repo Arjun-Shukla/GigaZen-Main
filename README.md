@@ -15,7 +15,7 @@ Gigazen is a **SaaS-based web application** that allows users to **rent premium 
 * 📊 **Cookie based session storing**
 * 📦 **RESTful API Architecture**
 
----
+------
 
 ## 🧑‍💻 Tech Stack
 
